@@ -15,11 +15,22 @@ var startButton = document.getElementById('start');
 			startButton.addEventListener('click', () => { recognition.start(); });
 			stopButton.addEventListener('click', () => { recognition.stop(); });
 
-			recognition.addEventListener('result', (event) => {
-				const result = event.results[event.results.length - 1][0].transcript;
-				resultElement.textContent = result;
-        transcript.textContent = result;
-			});
+      recognition.addEventListener('result', (event) => {
+        let interimTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+                const result = event.results[i][0].transcript;
+                fullTranscript.push(result);
+                resultElement.textContent = result;
+                transcript.textContent = fullTranscript.join(' '); // Update transcript with full content
+            } else {
+                interimTranscript += event.results[i][0].transcript;
+            }
+        }
+        if (interimTranscript.trim() !== '') {
+            resultElement.textContent = interimTranscript;
+        }
+    });
 
 
 
