@@ -1,14 +1,14 @@
 import React, {useRef, useEffect, useState} from "react";
 import axios from "axios";
 
-const key = PUT_KEY_HERE;
+const key = `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`;
 const model = "whisper-1";
 
 const Example = () => {
     const inputRef = useRef();
     const [file, setFile] = useState();
     const [response, setResponse] = useState(null);
-    
+    console.log(key);
 
     const onChangeFile = () => {
         setFile(inputRef.current.files[0]);
