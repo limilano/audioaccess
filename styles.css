@@ -1,120 +1,45 @@
-/* css */
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background:linear-gradient(to right bottom, #d13cff, #031f6a);
+	color: #000;
+	
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
-* {
-    font-family: 'Ubuntu', sans-serif;;
-  }
-  
-  .container-fluid {
-    width: 100%;
-     margin: 0 !important;
-     padding: 0 !important;
-  }
-  
-  .col {
-    padding: 2% 0;
-  }
-  
-  .row {
-    width: 100%;
-  }
-  
-  .gray {
-    color: #61666C;
-    padding: 0 2%;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .header {
-    background-color: #ffba61;
-    text-align: center;
-    color: white;
-    padding: 1.5% 0;
-  }
-  
-  h2 {
-    font-size: 3vw;
-  }
-  
-  p, .textFixer{
-    font-size: 1.3vw;
-    margin:0;
-  }
-  
-  h4 {
-    font-size: 1.6vw;
-  }
-  
-  .mainBody {
-    padding: 2% 15%;
-    font-size: 17px;
-  }
-  
-  .comment {
-    border: solid 1px #E7ECF0;
-  }
-  
-  .pad {
-    padding: 2% 3%;
-  }
-  
-  .screenname {
-    font-weight: bold;
-    vertical-align: top;
-    font-size: 1.6vw;
-  }
-  
-  #tweetHeader {
-    padding-top:0px;
-  }
-  
-  
-  div.metrics {
-      display: table;
-      width: 100%;
-      table-layout: fixed;
-  }
-  div.metrics span {
-      display: table-cell;
-      text-align: left;
-  }
-  
-  #form2.metrics span {
-      display: table-cell;
-      text-align: center;
-  }
-  
-  #negativityInput {
-    width: 50%;
-  }
-  
-  
-  /* Style the button that is used to open and close the collapsible content */
-  .collapsible {
-    border: none;
-    text-align: center;
-    outline: none;
-  }
-  
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 2% 0;
-    display: none;
-    overflow: hidden;
-    text-align: left;
-  }
-  
-  .btn-primary {
-    border-color: #55ACEF;
-    color: #55ACEF;
-    background-color: white;
-  }
-  
-  .btn-primary:hover  {
-    background-color: #55ACEF;
-    border-color: #55ACEF;
-  }
-  
+.voice_to_text{
+  width: 600px;
+  text-align: center;
+}
+h1{
+	color: #fff;
+	font-size: 50px;
+}
+#convert_text{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+button{
+	padding: 12px 20px;
+  background: #0ea4da;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
