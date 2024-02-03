@@ -1,13 +1,14 @@
 import React, {useRef, useEffect, useState} from "react";
 import axios from "axios";
 
-const VITE_OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+const key = PUT_KEY_HERE;
 const model = "whisper-1";
 
 const Example = () => {
     const inputRef = useRef();
     const [file, setFile] = useState();
     const [response, setResponse] = useState(null);
+    
 
     const onChangeFile = () => {
         setFile(inputRef.current.files[0]);
@@ -27,7 +28,7 @@ const Example = () => {
              .post("https://api.openai.com/v1/audio/transcriptions",formData,{
                 headers: {
                     "Content-Type" : "multipart/form-data",
-                    Authorization: `Bearer ${VITE_OPENAI_API_KEY}`,
+                    Authorization: `Bearer ${key}`,
                 },
              })
              .then((res) => {
