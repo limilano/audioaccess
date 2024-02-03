@@ -1,26 +1,22 @@
 /* javascript */
 
-click_to_record.addEventListener('click',function(){
-  var speech = true;
-  window.SpeechRecognition = window.webkitSpeechRecognition;
+var startButton = document.getElementById('start');
+			var stopButton = document.getElementById('stop');
+			var resultElement = document.getElementById('result');
 
-  const recognition = new SpeechRecognition();
-  recognition.interimResults = true;
+			var recognition = new webkitSpeechRecognition();
 
-  recognition.addEventListener('result', e => {
-      const transcript = Array.from(e.results)
-          .map(result => result[0])
-          .map(result => result.transcript)
-          .join('')
+			// recognition.continous = true;
+			recognition.lang = window.navigator.language;
+			recognition.interimResults = true;
 
-      document.getElementById("convert_text").innerHTML = transcript;
-      console.log(transcript);
-  });
-  
-  if (speech == true) {
-      recognition.start();
-  }
-})
+			startButton.addEventListener('click', () => { recognition.start(); });
+			stopButton.addEventListener('click', () => { recognition.stop(); });
+
+			recognition.addEventListener('result', (event) => {
+				const result = event.results[event.results.length - 1][0].transcript;
+				resultElement.textContent = result;
+			});
 
 
 
