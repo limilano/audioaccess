@@ -43,18 +43,6 @@ async function query(data) {
 
   console.log(comment);
 
-  // comment = comment.substring(0,comment.indexOf(`\\`));
-
-  //while loop to make sure it ends with a period?
-  // if(comment.indexOf('.') != -1  || comment.indexOf('!') != -1  || comment.indexOf('?') != -1  || comment.indexOf(':') != -1) {
-  //
-  //   while (comment.charAt(comment.length - 1) != '.' && comment.charAt(comment.length - 1) != '?' &&
-  //   comment.charAt(comment.length - 1) != '!' && comment.charAt(comment.length - 1) != ':' && comment.length > 2) {
-  //     console.log(comment.charAt(comment.length - 1));
-  //     comment = comment.substring(0,comment.length - 2);
-  //   }
-  //
-  // }
 
   let punctuation;
 
