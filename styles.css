@@ -102,7 +102,7 @@ div.metrics span {
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 2% 0;
-  display: none;
+  /* display: none; */
   overflow: hidden;
   text-align: left;
 }
